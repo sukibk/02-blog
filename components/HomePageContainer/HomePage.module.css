@@ -1,0 +1,11 @@
+.main{
+    border: 3px solid navajowhite;
+    border-radius: 2rem;
+    margin: 0 auto;
+}
+
+.context{
+    padding: 2rem;
+    display: flex;
+    justify-content: end;
+}

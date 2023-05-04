@@ -1,0 +1,15 @@
+.wrapper{
+    width: 40%;
+}
+
+.title{
+    font-size: 30px;
+    margin-bottom: 2rem;
+    margin-left: 2.5rem;
+}
+
+.main{
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 5rem;
+}

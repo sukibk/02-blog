@@ -1,0 +1,13 @@
+.navbar{
+    background-color: #505050;
+    border-radius: 0 0 2rem 2rem;
+    margin: 0 2rem;
+}
+
+.nav{
+    list-style: none;
+    display: flex;
+    padding: 2rem 9rem;
+    justify-content: space-between;
+    align-items: center;
+}

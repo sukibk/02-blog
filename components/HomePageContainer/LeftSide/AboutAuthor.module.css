@@ -1,0 +1,14 @@
+.wrapper{
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-right: 1px solid white;
+    padding-right: 7rem;
+}
+
+.wrapper img{
+    width: 500px;
+    border-radius: 2rem;
+}
