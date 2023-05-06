@@ -1,0 +1,36 @@
+.wrapper{
+    margin: 0 auto;
+    width: 50%;
+}
+
+.form{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: space-evenly;
+}
+
+.item{
+    background: none;
+    border: none;
+    font-size: 20px;
+    padding: 0.5rem;
+    border-bottom: 1px solid navajowhite;
+    color: white;
+}
+
+.outer{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.actions{
+    margin: 2rem auto;
+}
+
+.home{
+    position: absolute;
+    right: 0;
+}
