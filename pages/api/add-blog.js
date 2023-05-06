@@ -4,7 +4,7 @@ export default async function addBlog(req, res){
     if(req.method === 'POST'){
         const data = req.body;
 
-        const client = MongoClient.connect('mongodb+srv://suki_admin:TenisMarkoSudar1@cluster0.yqzrdpi.mongodb.net/blogs?retryWrites=true&w=majority');
+        const client = await MongoClient.connect('mongodb+srv://suki_admin:TenisMarkoSudar1@cluster0.yqzrdpi.mongodb.net/blogs?retryWrites=true&w=majority');
 
         const db = client.db();
 

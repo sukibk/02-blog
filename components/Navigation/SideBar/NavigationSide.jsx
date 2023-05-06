@@ -1,19 +1,12 @@
 import styles from './NavigationSide.module.css';
 import Button from "@/components/utils/Button";
 
-export default function NavigationSide() {
+export default function NavigationSide(props) {
     return <ul className={styles.nav}>
-        <li className={styles.navitem}>
-            <Button href=''>article 1</Button>
-        </li>
-        <li className={styles.navitem}>
-            <Button href=''>article 2</Button>
-        </li>
-        <li className={styles.navitem}>
-            <Button href=''>article 3</Button>
-        </li>
-        <li className={styles.navitem}>
-            <Button href=''>article 4</Button>
-        </li>
+        {props.navElements.map(element =>(
+        <li className={styles.navitem} key={element.title}>
+            <Button href={element.id}>{element.title}</Button>
+            {/*TO DO: Based of an eleemnt.id make new pages*/}
+        </li>))}
     </ul>
 }
