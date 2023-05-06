@@ -19,13 +19,11 @@ export async function getStaticPaths(){
 
     return {
         fallback: 'blocking',
-        paths: [
-            {
-                params: {
-                    blogId: 'A3BA0202D47F76028BD39934'
-                }
+        paths: blogPaths.map(path=>({
+            params: {
+                blogId: path._id.toString()
             }
-        ]
+        }))
 
     }
 }
