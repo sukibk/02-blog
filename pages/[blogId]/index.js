@@ -22,7 +22,7 @@ export async function getStaticPaths(){
         paths: [
             {
                 params: {
-                    blogId: '6456258l37fe7bed58bb1240'
+                    blogId: 'A3BA0202D47F76028BD39934'
                 }
             }
         ]
