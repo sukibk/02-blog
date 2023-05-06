@@ -18,8 +18,7 @@ export async function getStaticPaths(){
     client.close();
 
     return {
-        revalidate: 1,
-        fallback: false,
+        fallback: 'blocking',
         paths: blogPaths.map(path=>({
             params: {
                 blogId: path._id.toString()
