@@ -19,6 +19,7 @@ export async function getStaticProps(){
   client.close();
 
   return {
+    revalidate: 10,
     props: {
       blogs: results.map(blog => ({
         ...blog,
