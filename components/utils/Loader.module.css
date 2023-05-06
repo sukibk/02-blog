@@ -1,0 +1,14 @@
+.wrapper{
+    background-color: rgba(80, 80, 80, 0.18);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+.media{
+    width: 300px;
+    height: 300px;
+}
