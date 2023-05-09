@@ -13,8 +13,8 @@ function Loading(){
         const handleStart = (url) => (url !== router.asPath) && setLoading(true);
         const handleComplete = (url) => (url === router.asPath) && setLoading(false);
 
-        router.events.on('routeChangeStart', handleStart)
-        router.events.on('routeChangeComplete', handleComplete)
+        router.events.on('routeChangeStart', () => {handleStart(); console.log('started')})
+        router.events.on('routeChangeComplete', () => {handleComplete(); console.log('completed')})
         router.events.on('routeChangeError', handleComplete)
 
         return () => {
