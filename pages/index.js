@@ -12,7 +12,7 @@ export default function HomePage(props){
   </>
 }
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
   const client = await MongoClient.connect('mongodb+srv://suki_admin:TenisMarkoSudar1@cluster0.yqzrdpi.mongodb.net/blogs?retryWrites=true&w=majority');
 
   const db = client.db();
@@ -24,7 +24,7 @@ export async function getStaticProps(){
   client.close();
 
   return {
-    revalidate: 1,
+    // revalidate: 1,
     props: {
       blogs: results.map(blog => ({
         ...blog,
