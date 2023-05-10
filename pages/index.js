@@ -1,8 +1,13 @@
 import HomePageContainer from "@/components/HomePageContainer/HomePageContainer";
 import {MongoClient} from "mongodb";
+import Head from "next/head";
 
 export default function HomePage(props){
   return <>
+    <Head>
+      <title>Blog</title>
+      <meta name='description' contetnt='Website for blogging'/>
+    </Head>
     <HomePageContainer blogs={props.blogs}/>
   </>
 }

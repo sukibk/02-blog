@@ -1,11 +1,18 @@
 import Blog from "@/components/Blog/Blog";
 import {MongoClient, ObjectId} from "mongodb";
+import Head from "next/head";
+import {useRouter} from "next/router";
 
-export default function BlogPage(props){
-    return <Blog blog={props.blog}/>
+export default function BlogPage(props) {
+    return <>
+        <Head>
+            <title>{props.blog.title}</title>
+        </Head>
+        <Blog blog={props.blog}/>
+    </>
 }
 
-export async function getStaticPaths(){
+export async function getStaticPaths() {
 
     const client = await MongoClient.connect('mongodb+srv://suki_admin:TenisMarkoSudar1@cluster0.yqzrdpi.mongodb.net/blogs?retryWrites=true&w=majority')
 
@@ -19,7 +26,7 @@ export async function getStaticPaths(){
 
     return {
         fallback: 'blocking',
-        paths: blogPaths.map(path=>({
+        paths: blogPaths.map(path => ({
             params: {
                 blogId: path._id.toString()
             }
@@ -29,8 +36,7 @@ export async function getStaticPaths(){
 }
 
 
-
-export async function getStaticProps(context){
+export async function getStaticProps(context) {
     const blogId = context.params.blogId;
 
     const client = await MongoClient.connect('mongodb+srv://suki_admin:TenisMarkoSudar1@cluster0.yqzrdpi.mongodb.net/blogs?retryWrites=true&w=majority')

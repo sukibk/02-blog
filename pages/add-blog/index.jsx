@@ -2,6 +2,7 @@ import HomePageContainer from "@/components/HomePageContainer/HomePageContainer"
 import Form from "@/components/Form/Form";
 
 import {useRouter} from "next/router";
+import Head from "next/head";
 
 export default function AddBlogPage(props){
 
@@ -24,6 +25,9 @@ export default function AddBlogPage(props){
     }
 
     return <>
+        <Head>
+            <title>Add New Blog</title>
+        </Head>
         <Form onClick={handleAddBlog}/>
     </>
 }
